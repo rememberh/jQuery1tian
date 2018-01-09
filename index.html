@@ -3,23 +3,41 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#box ul li:odd").css("background","red")
+				$("#box ul li:even").css("background","blue")
+				$("#box1 ul .li2").css("background","green")
+				$("#box1 ul ol li:eq(2)").css("background","orange")
+				var li=$("#box ul li")
+				//alert(li.length)
+				$("#box ul li:eq("+(li.length-2)+")").css("background","yellow")
+			})
+		</script>
 	</head>
 	<body>
-		<div class="liguiyan">
+		<div id="box">
 			<ul>
-				<li>李桂岩每天都老帅了，嗷嗷帅！</li>
-				<li>李桂岩每天都老帅了，嗷嗷帅！</li>
-				<li>李桂岩每天都老帅了，嗷嗷帅！</li>
-				<li>李桂岩每天都老帅了，嗷嗷帅！</li>
-				<li>李桂岩每天都老帅了，嗷嗷帅！</li>
-				<li>李桂岩每天都老帅了，嗷嗷帅！</li>
-				<li>李桂岩每天都老帅了，嗷嗷帅！</li>
+				<li>今天是星期一</li>
+				<li>今天是星期一</li>
+				<li>今天是星期一</li>
+				<li>今天是星期一</li>
+				<li>今天是星期一</li>
+				<li>今天是星期一</li>
 			</ul>
 		</div>
-		<div class="liguiyan1">今天天气不错</div>
+		<div id="box1">
+			<ul>
+				<li>1111111</li>
+				<li class="li2">1111111</li>
+				<li>1111111</li>
+				<ol>
+					<li>2222222</li>
+					<li>2222222</li>
+					<li>2222222</li>
+				</ol>
+			</ul>
+		</div>
 	</body>
 </html>
-<script src="jquery-1.11.1.min.js"></script>
-<script type="text/javascript">
-	$(".liguiyan1")
-</script>
